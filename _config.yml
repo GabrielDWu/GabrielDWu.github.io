@@ -18,14 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Gabe's Site
+title: The Excluded Riddle
 author: Gabriel Wu
-email: gabriel.d.wu314@gmail.com
-description: >-
-  Lorem ipsum
+email: gabrielwu@college.harvard.edu
+description: "Assorted thoughts on assorted topics."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: GabrielDWu1
+twitter_username: GabrielDWu1
 linkedin_username: gabriel-d-wu
 github_username: GabrielDWu
 codeforces_username: gabrielwu
