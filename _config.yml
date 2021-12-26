@@ -21,13 +21,14 @@
 title: The Excluded Riddle
 author: Gabriel Wu
 email: gabrielwu@college.harvard.edu
-description: "Assorted thoughts on assorted topics."
+description: "Gabriel Wu's blog"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: GabrielDWu1
 linkedin_username: gabriel-d-wu
 github_username: GabrielDWu
 codeforces_username: gabrielwu
+show_tags: true
 
 # Build settings
 theme: minima

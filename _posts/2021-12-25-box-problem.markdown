@@ -1,10 +1,12 @@
 ---
 layout: post
 title:  "The Periodic Box Problem"
-date:   2021-12-25 12:00:00 -0500
-categories: jekyll update
+date:   2021-12-25
 author: Gabriel Wu
 permalink: box_problem
+desc: "A metaphysical thought experiment."
+tags: [philosophy, physics]
+words: 1700
 ---
 
 Here is an interesting thought experiment I came up with that brings up some deep questions about metaphysics and identity. To start with, consider the following two scenarios.
@@ -57,7 +59,7 @@ For the purposes of this thought experiment, let's assume the universe is determ
 
 # The Question
 
-You wake up one day and find yourself in what *appears* to be an infinite metal hallway with an infinite row of your clones. Which of these two scenarios are you in? Is the hallway actually infinite, or are are you in a box with a portal? Are those people actually clones, or are they just images of yourself?
+You wake up one day and find yourself in what *appears* to be an infinite metal hallway with an infinite row of your clones. Which of these two scenarios are you in? Is the hallway actually infinite, or are you in a box with a portal? Are those people actually clones, or are they just images of yourself?
 
 The big claim here is that <mark>it is impossible for you to distinguish between the two scenarios</mark>. Any experiment you could conduct will produce the exact same results, regardless of whether you're in Scenario 1 or Scenario 2. If you take out a baseball and throw it forward, a second later a baseball will hit the back of your head. Is this the same baseball you threw, having gone through a portal, or is it the baseball belonging to the clone behind you? If you reach out and touch the back of the person in front of you, you will feel an equal touch on *your* back. Are you actually touching your own back, or are you touching the back of the clone in front of you while the clone behind you touches your back? This brings up the Big Question.
 

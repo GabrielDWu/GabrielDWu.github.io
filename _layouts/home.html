@@ -16,11 +16,17 @@ layout: default
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
+        
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
-        </h3>
+        
+        {%- if post.desc -%}
+          <p class="post-desc">{{ post.desc }}</p>
+        {%- endif -%}
+        
+          <p class="post-tag">{% if post.tags.size > 0 %}Tag{% if post.tags.size > 1 %}s{% endif %}: {{ post.tags | sort | join: ", " }}. {% endif %}{% if post.words %}{{ post.words }} words.{% endif %}</p>
+                
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
