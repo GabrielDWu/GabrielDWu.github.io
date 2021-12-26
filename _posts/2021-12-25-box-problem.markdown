@@ -7,6 +7,7 @@ permalink: box_problem
 desc: "A metaphysical thought experiment."
 tags: [philosophy, physics]
 words: 1700
+suggested: true
 ---
 
 Here is an interesting thought experiment I came up with that brings up some deep questions about metaphysics and identity. To start with, consider the following two scenarios.

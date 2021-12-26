@@ -10,14 +10,44 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page .list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">{{ "Suggested" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      {%- if post.suggested -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        
+          <a class="post-link" href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}">
+            {{ post.title | escape }}
+          </a>
+        
+        {%- if post.desc -%}
+          <p class="post-desc">{{ post.desc }}</p>
+        {%- endif -%}
+        
+          <p class="post-tag">{% if post.tags.size > 0 %}Tag{% if post.tags.size > 1 %}s{% endif %}: {{ post.tags | sort | join: ", " }}. {% endif %}{% if post.words %}{{ post.words }} words.{% endif %}</p>
+                
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <br>
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page .list_title | default: "All Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         
-          <a class="post-link" href="{{ post.url | relative_url }}">
+          <a class="post-link" href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}">
             {{ post.title | escape }}
           </a>
         
