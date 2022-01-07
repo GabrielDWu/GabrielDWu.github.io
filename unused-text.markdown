@@ -1,3 +1,9 @@
+Great job finding this site Easter Egg! This is where I store significant amounts of text that I've cut from blogs.
+
+-----
+
+From flipping_coins (removed because generating $$LIPS$$ is actually $$O(n^2)$$ using this algorithm):
+
 It turns out that the entire $$LPS$$ array can be computed in $$O(n)$$ using the following C++ code:
 ```c++
 lps[0] = 0;
@@ -64,3 +70,5 @@ for(int i=1; i<n; i++) {
 	}
 }
 ```
+
+-----
