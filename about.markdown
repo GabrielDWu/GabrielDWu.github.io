@@ -12,4 +12,4 @@ My interests include:
 - AI safety
 - philosophy
 
-This website is currently a work in progress. Hopefully one day it will have a significant number of posts.
+The title of this blog is a reference to the *Law of the Excluded Middle* (LEM), an axiom of logic which states that $$P \vee \neg P$$, for any proposition $$P$$. Any time you do a proof by contradiction, you are implicitly invoking this law. In the words of David Hilbert, a mathematician's dependency on the Law of the Excluded Middle is as akin to "the boxer's use of his fists". Yet, a competing branch of mathematical ideology called [intuitionism](	https://en.wikipedia.org/wiki/Intuitionism) denies this law, believing it to be philosophically unjustified (*how can you just assume that everything is either true or false from the get-go?*). I find the tension between intuitionism and classical mathematics very interesting. While I personally quite enjoy the use of my fists, I'm sympathetic to certain intuitionist views.
