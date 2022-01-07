@@ -12,4 +12,4 @@ My interests include:
 - AI safety
 - philosophy
 
-This website is currently a <u>work in progress</u>. Hopefully one day it will have a significant number of posts.
+This website is currently a work in progress. Hopefully one day it will have a significant number of posts.
