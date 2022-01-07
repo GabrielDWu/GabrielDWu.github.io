@@ -169,7 +169,7 @@ In this manner, we can almost-reduce a row in $$O(1)$$ time by maintaining prefi
 
 # Conclusion
 
-The algorithm presented here computes the expected number of coin flips required to achieve a given string in $$O(n)$$ time. I am sure that I am not the first person to have thought of this problem, but as far as I know this is the first instance of a linear-time algorithm to solve it -- although if you find this on some old AtCoder contest, please let me know... I wouldn't be surprised :). Thank you for reading!
+The algorithm presented here computes the expected number of coin flips required to achieve a given string in $$O(n)$$ time. After writing this, many articles on this problem were brought to my attention which use similar techniques. My favorite is [this](https://jeremykun.com/2014/03/03/martingales-and-the-optional-stopping-theorem/) explanation of viewing the problem through the lens of a fair casino. Also, it was pointed out that this problem has a strong connection to [autocorrelation polynomials](https://en.wikipedia.org/wiki/Autocorrelation_%28words%29). Thank you for reading!
 
 [Here](/assets/flipping_coins.cpp) is my final code (the answer is outputted modulo $$10^9 + 7$$).
 
