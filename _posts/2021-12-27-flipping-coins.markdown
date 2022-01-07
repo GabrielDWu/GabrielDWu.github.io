@@ -31,7 +31,7 @@ Let's consider a simple example. How many coins do you need to flip before getti
 
 The solution is to use *states*, a technique common to expected value problems. The idea of states is simple: define a bunch of variables to represent different stages of progress towards a goal. Create relations among the variables corresponding to "transitions" from one state to another, then solve the system of (usually) linear equations for the answer. In our case, when given string $$S$$ of length $$n$$, we will use $$n+1$$ state variables: $$e_0, e_1, \dots, e_n$$. The variable $$e_i$$ will represent _the expected number of additional flips required to obtain string $$S$$ given that we've just flipped the first $$i$$ characters of $$S$$_. By definition, $$e_n$$ represents the expected number of flips to obtain $$S$$ if we've already flipped all of $$S$$, so $$e_n = 0$$. Our final answer will be $$e_0$$ (because we start out with nothing flipped).
 
-Formally, what we're doing here is a creating "state function" $$f: \{\text{H}, \text{T}\}^* \to \{0, 1, \dots, n\}$$ that maps every possible string of coin flips to a unique state in $$\{0, 1, \dots, n\}$$. In this case, our state function $$f$$ takes in a string $$s$$ and outputs the largest nonnegative integer $$i$$ such that &#124;$$s$$&#124; $$\geq i$$ and the last $$i$$ characters of $$s$$ are the first $$i$$ characters of $$S$$. For example, if $$S$$ is **HTHH**, then the empty string gets assigned state $$0$$, **H<mark>HT</mark>** gets state $$2$$, **HHHT<mark>HTH</mark>** gets state $$3$$, and **T<mark>HTHH</mark>** gets state $$4$$.
+Formally, what we're doing here is a creating "state function" $$f: \{\text{H}, \text{T}\}^* \to \{0, 1, \dots, n\}$$ that maps every possible string of coin flips to a unique state in $$\{0, 1, \dots, n\}$$. In this case, our state function $$f$$ takes in a string $$s$$ and outputs the largest nonnegative integer $$i$$ such that &#124;$$s$$&#124; $$\geq i$$ and the last $$i$$ characters of $$s$$ are the first $$i$$ characters of $$S$$ (note the difference between $$s$$ and $$S$$ -- little $$s$$ is the input to $$f$$, while big $$S$$ is our target string which acts as a global variable). For example, if $$S$$ is **HTHH**, then the empty string gets assigned state $$0$$, **H<mark>HT</mark>** gets state $$2$$, **HHHT<mark>HTH</mark>** gets state $$3$$, and **T<mark>HTHH</mark>** gets state $$4$$.
 
 We require $$f$$ to have two properties in order to be a valid state function. Define the subset of "accept strings" $$A \subset \{\text{H}, \text{T}\}^* $$ to be all strings for which we have just encountered all of $$S$$ (so, strings that have $$S$$ as a suffix). Then our first requirement is that $$A$$ corresponds to a state[^2] $$\sigma$$, i.e. that $$s \in A \Longleftrightarrow f(s) = \sigma$$. Our second requirement is that _transitions are well-defined on states_. Define the transition function $$T(s, \sigma')$$ to be the probability that when you add **H** or **T** at random to string $$s$$ you end up with some string $$s'$$ satisfying $$f(s') = \sigma'$$. Then this requirement says that $$T(s, \underline{\quad})$$ depends only on the state $$f(s)$$, i.e. $$T(s, \sigma') \equiv \tau(f(s), \sigma')$$ for some function $$\tau$$. You may want to take some time to think about why these two properties are important in a state function. Then, convince yourself that our definition of $$f$$ does in fact satisfy both of them. The first requirement is straightforward ($$A$$ is just state $$n$$), but the second one is not as immediate.
 
@@ -84,7 +84,7 @@ In addition to $$LPS$$, we will have three more arrays of length $$n$$: $$LIPS$$
 
 It turns out that we can generate all four of these arrays in linear time using dynamic programming![^4] Here's my C++ code:
 
-[^4]: This actually gives us a linear time algorithm for generating $$LPS$$ that is different from the standard technique (described [here](https://medium.com/@aakashjsr/preprocessing-algorithm-for-kmp-search-lps-array-algorithm-50e35b5bb3cb)) that is typically used in KMP. One advantage to my technique is that it is clearer to see that it runs in $$O(n)$$ than the standard method. It may also be more intuitive to some people.
+[^4]: This actually gives us a linear time algorithm for generating $$LPS$$ that is different from the standard technique (described [here](https://medium.com/@aakashjsr/preprocessing-algorithm-for-kmp-search-lps-array-algorithm-50e35b5bb3cb)) that is typically used in KMP (although this only works for two-character alphabets; bigger alphabets will require more arrays). One advantage to my technique is that it is clearer to see that it runs in $$O(n)$$ than the standard method.
 
 ```c++
 
@@ -171,6 +171,9 @@ In this manner, we can almost-reduce a row in $$O(1)$$ time by maintaining prefi
 # Conclusion
 
 The algorithm presented here computes the expected number of coin flips required to achieve a given string in $$O(n)$$ time. I am sure that I am not the first person to have thought of this problem, but as far as I know this is the first instance of a linear-time algorithm to solve it -- although if you find this on some old AtCoder contest, please let me know... I wouldn't be surprised :). Thank you for reading!
+
+[Here](/assets/flipping_coins.cpp) is my final code (the answer is outputted modulo $$10^9 + 7$$).
+
 
 ***
 
