@@ -35,7 +35,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
-google_analytics: G-GFH4VDG1NQ
+# google_analytics: G-GFH4VDG1NQ
 
 # Exclude from processing.
 # The following items will not be processed, by default.
