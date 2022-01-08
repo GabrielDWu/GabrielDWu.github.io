@@ -8,6 +8,7 @@ desc: "My high school Senior Research Project on designing algorithms to search 
 tags: [math, computer science, philosophy]
 words: 4000
 pdf: assets/automated_theorem_proving.pdf
+comments: false
 ---
 
 The paper can be found [here](assets/automated_theorem_proving.pdf)
