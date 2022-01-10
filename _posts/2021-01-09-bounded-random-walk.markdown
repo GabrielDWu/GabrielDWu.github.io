@@ -3,7 +3,7 @@ layout: post
 title:  "The Bounded Random Walk, Four Different Ways"
 date:   2022-01-10
 author: Gabriel Wu
-permalink: flipping-coins
+permalink: bounded-random-coins
 desc: What is the probability that a random walk starting at 3 reaches 10 before 0? There are many ways to reach the same answer.
 tags: [math]
 words: 1600
