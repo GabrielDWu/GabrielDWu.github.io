@@ -56,7 +56,7 @@ If you've watched *Star Wars: The Last Jedi*, this is essentially what Rey exper
 
 For the purposes of this thought experiment, let's assume the universe is deterministic. The state of the universe at time $$t+1$$ is completely determined by the state of the universe at time $$t$$. We'll just ignore weird quantum randomness and problems with free will for now [^3]. Since your actions are determined by your brain state, which in turn is controlled by physical laws that affect all of your clones' brains identically, your clones will all act in the exact same way as you. Every time you have the urge to wave your left hand, all infinity of your clones will feel the same urge to wave their left hands. If you open your mouth and shout out "you guys move left, I'll move right," all of *them* will simultaneously shout the same thing. Even if you take a coin out of your pocket and flip it, the exact muscle twitches you use to toss the coin will be the same for all of your clones, so you will all get the same result. No matter how hard you try, you will never be able to break the fundamental periodicity of your universe.
 
-[^3]: I personally believe that the mystery of conciousness (also called the "hard problem of conciousness") is the most effective counter to determinism. But that's for another day.
+[^3]: I personally believe that the mystery of consciousness (also called the "hard problem of consciousness") is the most effective counter to determinism. But that's for another day.
 
 # The Question
 

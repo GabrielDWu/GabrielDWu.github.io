@@ -23,7 +23,7 @@ author: Gabriel Wu
 email: gabriel.d.wu314@gmail.com
 description: "Gabriel Wu's blog"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gabrieldwu.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: GabrielDWu1
 linkedin_username: gabriel-d-wu
 github_username: GabrielDWu
