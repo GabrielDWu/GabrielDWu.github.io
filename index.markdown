@@ -5,4 +5,4 @@
 layout: home
 ---
 
-My blog about math, computer science, and philosophy (and whatever else I happen to find interesting).
+My blog about (mainly) math, computer science, and philosophy.
