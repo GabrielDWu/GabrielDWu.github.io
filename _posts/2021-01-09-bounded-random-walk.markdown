@@ -62,9 +62,9 @@ This is a neat solution, but how does it help us with our original problem? Let'
 <img src="/assets/bounded_random_walk/wolf_circle_2.png" width="60%">
 </div>
 
-Now our problem is equivalent to finding the probability that the wolf eats sheep $$10$$ before sheep $$0$$. Here comes the key observation. If the *last* sheep it eats is $$0$$, $$1$$, or $$2$$, then the wolf must have eaten sheep $$10$$ before sheep $$0$$. Otherwise, if the last sheep it eats is one of $$4, 5, \dots, 10$$, then the wolf must have eaten $$0$$ before $$10$$.[^1] This is great news because we already know each sheep has a $$\frac{1}{10}$$ probability of being eaten last! Thus, our final answer is $$\frac{3}{10}$$.
+Now our problem is equivalent to finding the probability that the wolf eats sheep $$10$$ before sheep $$0$$. Here comes the key observation. If the *last* sheep it eats is $$0$$, $$1$$, or $$2$$, then the wolf must have eaten sheep $$10$$ before sheep $$0$$. Otherwise, if the last sheep it eats is one of $$4, 5, \dots, 10$$, then the wolf must have eaten $$0$$ before $$10$$.[^2] This is great news because we already know each sheep has a $$\frac{1}{10}$$ probability of being eaten last! Thus, our final answer is $$\frac{3}{10}$$.
 
-[^1]: It is fairly easy to convince yourself of this fact by tracing your finger along possible wolf routes. But to be more rigorous, you can observe that "$$0$$ is visited before $$10$$" implies "$$1$$ is visited before $$10$$", which implies "$$2$$ is visited before $$10$$". So if you assume the negation of one of these statements (which is what you get with "$$0$$, $$1$$, or $$2$$ is the last sheep visited"), a chain of contrapositives should result in "$$10$$ is visited before $$0$$". The other case works similarly.
+[^2]: It is fairly easy to convince yourself of this fact by tracing your finger along possible wolf routes. But to be more rigorous, you can observe that "$$0$$ is visited before $$10$$" implies "$$1$$ is visited before $$10$$", which implies "$$2$$ is visited before $$10$$". So if you assume the negation of one of these statements (which is what you get with "$$0$$, $$1$$, or $$2$$ is the last sheep visited"), a chain of contrapositives should result in "$$10$$ is visited before $$0$$". The other case works similarly.
 
 **Pros.** I think this is the "coolest" method listed here because of how it leverages symmetry around a circle. For another example of this, see Eric Neyman's [proof](https://ericneyman.wordpress.com/2020/11/29/an-elegant-proof-of-laplaces-rule-of-succession/) of Laplace's Rule of Succession.
 
@@ -74,11 +74,11 @@ Now our problem is equivalent to finding the probability that the wolf eats shee
 
 You are playing a betting game with your friend. You start with $$\$3$$, and your friend starts with $$\$7$$. Every turn, you flip a coin. If heads, you take a dollar from your friend, and if tails, your friend takes a dollar from you. You keep playing until someone runs out of money. It should be clear that this setup is identical to the original problem. We are interested in the probability that you win all $$\$10$$.
 
-Notice that this game is *fair*, meaning that *every step of the game your wealth changes by an expected value of $$0$$*. Thus, the expected value of your money at the start of the game is the same as the expected value of your money after the game! Since your money at the start of the game is $$\$3$$, there must be a $$30\%$$ chance that you end up winning the $$\$10$$.[^3]
+Notice that this game is *fair*, meaning that *at every step of the game your wealth changes by an expected value of $$0$$*. Thus, the expected value of your money at the start of the game is the same as the expected value of your money after the game! Since your money at the start of the game is $$\$3$$, there must be a $$30\%$$ chance that you end up winning the $$\$10$$.[^3]
 
 [^3]: This type of fair game is also called a *martingale*, which comes with a bunch of theorems that we are implicitly invoking in this solution.
 
-**Pros.** This is the simplest and (in my opinion) the most elegant of all of the methods listed here. It highlights the fluidity between probability and expected value. We took the probability of random walk and reframed it as a game with money, and then as soon as we said the words "expected value" we found the answer staring us in the face.
+**Pros.** This is the simplest and (in my opinion) the most elegant of all of the methods listed here. It highlights the fluidity between probability and expected value. We took the probability of a random walk and reframed it as a game with money, and then as soon as we said the words "expected value" we found the answer staring us in the face.
 
 **Cons.** I saved this method for last because it was actually the last one I thought of! Sometimes a solution is so natural that it takes a bit of thinking before you even consider it -- and in that time you will have already thought of something else.
 
