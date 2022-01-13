@@ -7,7 +7,7 @@ order: 1
 
 To receive updates when I make new posts, join [The Excluded Riddle Mailing List](https://groups.google.com/g/the-excluded-riddle-mailing-list).
 
-The link will redirect you to a Google Groups page. Once you are there, click **Join Group**. Make sure you're signed in to your Google account.
+The link will redirect you to a Google Groups page. Once you're there, click **Join Group**. Make sure you're signed in to your Google account.
 
 <br>
 
