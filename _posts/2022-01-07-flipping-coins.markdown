@@ -7,7 +7,7 @@ permalink: flipping-coins
 desc: What's the expected value of the number of times you must flip a coin before you encounter a given string, such as "HTTH"? Here's an algorithm to compute it.
 tags: [math, computer science]
 words: 3000
-suggested: true
+suggested: false
 ---
 
 *Prerequisites:*
