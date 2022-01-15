@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-order: 2
+order: 3
 ---
 <img src="/assets/me.jpg" align="right" width="35%">
 

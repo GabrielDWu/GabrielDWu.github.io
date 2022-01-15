@@ -32,7 +32,7 @@ This should be the most obvious step on this list, and by now you should be seco
 It pains me to say this, but some Harvard students do not engage in safe microwave practices. Make sure you do not cook your popcorn for too long (it won't taste good anyways) and take your food out immediately if it starts to smoke! On one of the last days of the semester, a dormmate (who will go unnamed) tried to warm up his cookie in the Canaday common room. Five minutes later, the fire department was on the scene. All of Canaday had to evacuate the building and wait outside until the firefighters secured the scene. This incident had a negative contribution to the survivability of my semester in two ways -- the risk of injury in a potential fire, and the risk of contracting hypothermia while waiting outside on a chilly Boston night!
 
 <div style="text-align:center;font-size:14px">
-<img src="/assets/how_to_survive/fire_truck.jpg" align="center" width="80%">
+<img src="/assets/how_to_survive/fire_truck.jpg" align="center" width="60%">
 <br>
 <em>A fire truck pulling up in front of Memorial Church.</em>
 </div>

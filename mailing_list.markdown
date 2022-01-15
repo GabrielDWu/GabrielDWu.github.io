@@ -2,7 +2,7 @@
 layout: page
 title: Mailing List
 permalink: /mailing-list/
-order: 1
+order: 2
 ---
 
 To receive updates when I make new posts, join [The Excluded Riddle Mailing List](https://groups.google.com/g/the-excluded-riddle-mailing-list).
