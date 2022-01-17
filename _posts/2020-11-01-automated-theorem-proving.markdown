@@ -3,7 +3,7 @@ layout: post
 title:  "Automated Theorem Proving in Intuitionistic Propositional Logic"
 date:   2020-11-01
 author: Gabriel Wu
-permalink: automated_theorem_proving
+permalink: automated-theorem-proving
 desc: "My high school Senior Research Project on designing algorithms to search for constructive proofs of logic theorems."
 tags: [math, computer science, philosophy]
 words: 4000

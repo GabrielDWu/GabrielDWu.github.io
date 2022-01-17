@@ -3,7 +3,7 @@ layout: post
 title:  "The Periodic Box Problem"
 date:   2021-12-25
 author: Gabriel Wu
-permalink: box_problem
+permalink: box-problem
 desc: "A metaphysical thought experiment."
 tags: [philosophy, physics]
 words: 1700

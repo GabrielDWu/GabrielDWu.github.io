@@ -3,7 +3,7 @@ layout: post
 title:  "Epistemic Context and Conditional Confidence"
 date:   2021-10-24
 author: Gabriel Wu
-permalink: epistemic_context
+permalink: epistemic-context
 desc: "There are unspoken assumptions that accompany any statement of knowledge. This allows us to be skeptical about fundamental properties of the universe while still having confidence in everyday facts."
 tags: [philosophy]
 words: 2100
