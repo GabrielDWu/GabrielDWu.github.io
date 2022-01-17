@@ -6,13 +6,13 @@ author: Gabriel Wu
 permalink: value-of-art
 desc: Some brief thoughts on the way we value art.
 tags: [philosophy]
-words: 
+words: 800
 suggested: false
 ---
 
 I recently realized that I've been thinking about art -- especially modern art -- in the wrong way. Up until a few weeks ago, my biggest problem with modern art was that people try to extract too much meaning out of too little content. Can Rothko's painting of two fuzzy rectangles *really* capture the depths of human emotion? This seems to violate some law of conservation of information. The way I saw it, you really only need a couple hundred bits (0s and 1s) to represent certain Rothko paintings[^1] -- the same amount of information as a couple of sentences of English text[^2].
 
-[^1]: There's basically a maximum of four different colors (taking three bytes each), only two different rectanglular shapes (four bytes each to encode their coordinates), and then to be safe you can add on a couple more bytes to encode different levels of fuzziness. It seems unlikely that any information not included in this encoding, like slight variations in hues and textures, plays a significant role in constructing meaning.
+[^1]: There's basically a maximum of four different colors (taking three bytes each), only two different rectangular shapes (four bytes each to encode their coordinates), and then to be safe you can add on a couple more bytes to encode different levels of fuzziness. It seems unlikely that any information not included in this encoding, like slight variations in hues and textures, plays a significant role in constructing meaning.
 
 [^2]: Assuming that English has around [one bit per character](https://en.wikipedia.org/wiki/Entropy_(information_theory)#Data_compression) of entropy.
 
