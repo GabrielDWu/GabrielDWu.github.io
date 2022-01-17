@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Survive Your First Semester at Harvard"
-date:   2022-01-07
+date:   2022-01-08
 author: Gabriel Wu
 permalink: how-to-survive-harvard
 desc: Here are four key steps you can take to survive your first few months of college.

@@ -50,3 +50,8 @@ This page contains a list of problems I've written that have appeared on various
 |     [HMMT 2021 Nov General](https://hmmt-archive.s3.amazonaws.com/tournaments/2021/nov/gen/problems.pdf) #8 |            **Simple routes on eight points**        |         III       |
 |      [HMMT 2021 Nov Guts](https://hmmt-archive.s3.amazonaws.com/tournaments/2021/nov/guts/problems.pdf) #20 |     Three mutually-attacking queens on a chessboard |          I        |
 |     [HMMT 2021 Nov Guts](https://hmmt-archive.s3.amazonaws.com/tournaments/2021/nov/guts/problems.pdf) #26  |              **Binary tree sequences**              |         IV        |
+
+
+***
+
+<br>
