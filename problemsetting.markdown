@@ -53,7 +53,7 @@ This page contains a list of problems I've written that have appeared on various
 |      [HMMT 2021 Nov Guts](https://hmmt-archive.s3.amazonaws.com/tournaments/2021/nov/guts/problems.pdf) #20 |     Three mutually-attacking queens on a chessboard |         I         |
 |     [HMMT 2021 Nov Guts](https://hmmt-archive.s3.amazonaws.com/tournaments/2021/nov/guts/problems.pdf) #26  |              **Binary tree sequences**              |         IV        |
 |     [HMMT 2022 Feb Combo](https://hmmt-archive.s3.amazonaws.com/tournaments/2022/feb/comb/problems.pdf) #3  |                HMMT string operations               |         II        |
-|     [HMMT 2022 Feb Combo](https://hmmt-archive.s3.amazonaws.com/tournaments/2022/feb/comb/problems.pdf) #7  |                    **Spiral Paths**                 |         IV        |
+|     [HMMT 2022 Feb Combo](https://hmmt-archive.s3.amazonaws.com/tournaments/2022/feb/comb/problems.pdf) #7  |                    **Spiral paths**                 |         IV        |
 |     [HMMT 2022 Feb Combo](https://hmmt-archive.s3.amazonaws.com/tournaments/2022/feb/comb/problems.pdf) #8  |               Smallest common prefix sum            |         V         |
 |     [HMMT 2022 Feb Guts](https://hmmt-archive.s3.amazonaws.com/tournaments/2022/feb/guts/problems.pdf) #11  |                   Inscribed dodecagon               |         I         |
 |     [HMMT 2022 Feb Guts](https://hmmt-archive.s3.amazonaws.com/tournaments/2022/feb/guts/problems.pdf) #24  |       **Manhattan distance in Sierpinski Carpet**   |         IV        |
