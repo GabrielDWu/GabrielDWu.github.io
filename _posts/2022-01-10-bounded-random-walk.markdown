@@ -10,8 +10,9 @@ words: 1600
 suggested: true
 ---
 
-*Prerequisites:*
-- expected value, linearity of expectation
+*Recommended prerequisites:*
+- expected value
+- linearity of expectation
 
 <br>
 

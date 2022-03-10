@@ -10,7 +10,7 @@ words: 3000
 suggested: false
 ---
 
-*Prerequisites:*
+*Recommended prerequisites:*
 - expected value, linearity of expectation
 - basic linear algebra
 - time complexity with Big-O notation (only in certain sections)
