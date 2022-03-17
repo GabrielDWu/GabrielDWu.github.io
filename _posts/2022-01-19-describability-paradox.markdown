@@ -111,6 +111,10 @@ The analogy here is striking. The expressivity of language stands for Frege's of
 
 [^7]: This is the main theme of Hofstadter's book *Gödel, Escher, Bach*.
 
+<center><b>* * *</b></center>
+
+*Ending note:* A few months after writing this post, it came to my attention that this paradox and the accompanying uncomputability results have already been extensively studied by many smart people. See the [Berry paradox](https://en.wikipedia.org/wiki/Berry_paradox).
+
 ***
 
 <br>

@@ -7,7 +7,7 @@ permalink: value-of-art
 desc: Some brief thoughts on the way we value art.
 tags: [philosophy]
 words: 800
-suggested: false
+suggested: true
 ---
 
 I recently realized that I've been thinking about art -- especially modern art -- in the wrong way. Up until a few weeks ago, my biggest problem with modern art was that people try to extract too much meaning out of too little content. Can Rothko's painting of two fuzzy rectangles *really* capture the depths of human emotion? This seems to violate some law of conservation of information. The way I saw it, you really only need a couple hundred bits (0s and 1s) to represent certain Rothko paintings[^1] -- the same amount of information as a couple of sentences of English text[^2].
