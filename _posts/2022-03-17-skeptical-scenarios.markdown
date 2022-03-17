@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Lower Bound on the Probability of Skeptical Scenarios"
-date:   2022-03-15
+date:   2022-03-17
 author: Gabriel Wu
 permalink: skeptical-scenarios
 desc: "A skeptical scenario is a possible but potentially absurd explanation of the universe, such as \"after we die we spend eternity in a field of red dandelions\". Here we see that, no matter how contrived a skeptical scenario is, the fact that you were able to think of it gives us a constant lower bound on its probability of being true."
