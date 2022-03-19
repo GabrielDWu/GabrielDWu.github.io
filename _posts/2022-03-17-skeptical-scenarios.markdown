@@ -94,7 +94,7 @@ We can finally state the main conclusion of this blog post.
 
 > Assuming such a prior, *any* skeptical scenario you can think of, no matter how contrived or absurd, must be *at least* $$2^{-400}$$ as likely as the Default View.
 
-How can this be possible? After all, aren't there be skeptical scenarios of arbitrarily large KC, which gives them arbitrarily low probabilities relative to the Default View?
+How can this be possible? After all, can't there be skeptical scenarios of arbitrarily large KC, which gives them arbitrarily low probabilities relative to the Default View?
 
 The answer is the presence of the phrase *"you can think of"*. The fact that you thought of a skeptical scenario gives an *upper bound* on its Kolmogorov Complexity.
 
