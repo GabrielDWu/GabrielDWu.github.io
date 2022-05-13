@@ -205,19 +205,30 @@
 .post-desc {
   /*font-style: italic;*/
   color: $grey-color-dark;
+  /*@include relative-font-size(1.1);*/
+  /*text-indent: 30px;*/
+}
+
+.post-tag {
+  color:  black;
+  /*font-style: italic;*/
+  /*text-indent: 30px;*/
+  margin-bottom: 0;
+}
+
+.post-preview {
+  color:  $grey-color-dark;
   text-indent: 30px;
   margin-bottom: 0;
 }
 
-.post-tag {
-  color:  $grey-color-dark;
-  font-style: italic;
-  text-indent: 30px;
+.post-image {
+  margin-bottom: $spacing-unit;
 }
 
 .post-link {
   display: block;
-  @include relative-font-size(1.5);
+  @include relative-font-size(2);
 }
 
 

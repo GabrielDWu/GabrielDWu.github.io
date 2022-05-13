@@ -8,6 +8,8 @@ desc: "A metaphysical thought experiment."
 tags: [philosophy, physics]
 words: 1700
 suggested: true
+image: "box_problem/box_fig1.png"
+preview: The entire universe consists of a rectangular box, which you are trapped in. Four of the faces -- the floor, the ceiling, and the left and right walls -- are solid metal and cannot be tampered with. However, the front and back faces (which are, say, 5 feet apart) act as portals
 ---
 
 Here is an interesting thought experiment I came up with that brings up some deep questions about metaphysics and identity. To start with, consider the following two scenarios.

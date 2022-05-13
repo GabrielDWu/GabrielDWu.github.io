@@ -7,6 +7,7 @@ permalink: epistemic-context
 desc: "There are unspoken assumptions that accompany any statement of knowledge. This allows us to be skeptical about fundamental properties of the universe while still having confidence in everyday facts."
 tags: [philosophy]
 words: 2100
+preview: "In <i>Meditations</i>, Descartes argues that we cannot fully trust the information given to us by our senses, as they have misled us in the past. We will never be able to rule out the possibilities that we are dreaming, that we are a brain in a vat, or that the universe (and all of our memories) sprang into existence 15 minutes ago. I find Descartes' argument compelling"
 ---
 
 I wrote the following paper for my first-year philosophy seminar *Skepticism and Knowledge*, which was taught by Professor Catherine Elgin.

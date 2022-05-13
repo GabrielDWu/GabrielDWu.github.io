@@ -4,10 +4,12 @@ title:  "A Lower Bound on the Probability of Skeptical Scenarios"
 date:   2022-03-17
 author: Gabriel Wu
 permalink: skeptical-scenarios
-desc: "A skeptical scenario is a possible but potentially absurd explanation of the universe, such as \"after we die we spend eternity in a field of red dandelions\". Here we see that, no matter how contrived a skeptical scenario is, the fact that you were able to think of it gives us a constant lower bound on its probability of being true."
+desc: "No matter how contrived a skeptical scenario is, the fact that you were able to think of it gives a constant lower bound on its likelihood."
 tags: [philosophy]
 words: 2500
 suggested: false
+image: "skeptical_scenarios/minecraft.png"
+preview: Attaining true knowledge is hard. As far as I know, I could be a brain in a vat with my nerve endings connected to wires that are simulating physical experiences. Gravity could reverse directions every 13.8 billion years, the first time being tomorrow. Or, our entire universe could be a simulation
 ---
 
 *I would like to thank Alex Cai for the wonderful discussion that inspired this blog post.*

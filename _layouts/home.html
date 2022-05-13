@@ -18,18 +18,23 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         
-          <a class="post-link" href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}">
-            {{ post.title | escape }}
-          </a>
-        
+        <a class="post-link" href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}">
+          {{ post.title | escape }}
+        </a>
+        <p class="post-tag">{% if post.tags.size > 0 %}Tag{% if post.tags.size > 1 %}s{% endif %}: <b>{{ post.tags | sort | join: "</b>, <b>" }}</b>. {% endif %}{% if post.words %}<i>{{ post.words }} words.</i>{% endif %}</p>
         {%- if post.desc -%}
           <p class="post-desc">{{ post.desc }}</p>
         {%- endif -%}
         
-          <p class="post-tag">{% if post.tags.size > 0 %}Tag{% if post.tags.size > 1 %}s{% endif %}: {{ post.tags | sort | join: ", " }}. {% endif %}{% if post.words %}{{ post.words }} words.{% endif %}</p>
                 
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+        {%- if post.image -%}
+          <div align="center" class="post-image"> <img src= "assets/{{post.image}}" height=300px> </div>
+        {%- endif -%}
+        
+        {%- if post.preview -%}
+          
+          <div class="post-preview"><svg class="quote-icon"><use xlink:href="/assets/minima-social-icons.svg#quote"></use></svg>{{ post.preview }} . . . </div>
+          <p align="right"> <a href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}"> <i> (Continue Reading) </i> </a> </p>
         {%- endif -%}
       </li>
       {%- endif -%}
@@ -40,31 +45,34 @@ layout: default
   <br>
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page .list_title | default: "All Posts" }} ({{ site.posts.size }})</h2>
+    <h2 class="post-list-heading">{{ "Suggested" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         
-          <a class="post-link" href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}">
-            {{ post.title | escape }}
-          </a>
-        
+        <a class="post-link" href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}">
+          {{ post.title | escape }}
+        </a>
+        <p class="post-tag">{% if post.tags.size > 0 %}Tag{% if post.tags.size > 1 %}s{% endif %}: <b>{{ post.tags | sort | join: "</b>, <b>" }}</b>. {% endif %}{% if post.words %}<i>{{ post.words }} words.</i>{% endif %}</p>
         {%- if post.desc -%}
           <p class="post-desc">{{ post.desc }}</p>
         {%- endif -%}
         
-          <p class="post-tag">{% if post.tags.size > 0 %}Tag{% if post.tags.size > 1 %}s{% endif %}: {{ post.tags | sort | join: ", " }}. {% endif %}{% if post.words %}{{ post.words }} words.{% endif %}</p>
                 
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+        {%- if post.image -%}
+          <div align="center" class="post-image"> <img src= "assets/{{post.image}}" height=300px> </div>
+        {%- endif -%}
+        
+        {%- if post.preview -%}
+          
+          <p class="post-preview"><svg class="quote-icon"><use xlink:href="/assets/minima-social-icons.svg#quote"></use></svg>{{ post.preview }} . . . </p>
+          <p align="right"> <a href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}"> <i> (Continue Reading) </i> </a> </p>
         {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>
-
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
 
 </div>

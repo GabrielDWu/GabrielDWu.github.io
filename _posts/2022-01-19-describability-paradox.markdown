@@ -6,8 +6,10 @@ author: Gabriel Wu
 permalink: describability-paradox
 desc: "We examine a classic paradox: what's the smallest positive integer that cannot be described in 20 words or less? With a bit of formalization, this problem leads us to an alternate proof that the halting function is uncomputable."
 tags: [computer science, math]
+image: "describability-paradox/tm.png"
 words: 2400
 suggested: false
+preview: Consider the set S of all positive integers that can be completely described in 20 words or fewer. This set contains a lot of numbers. For example, "two to the power of ten" describes 1024 in six words. "One hundred and seven" describes 107 in four words
 ---
 
 *Recommended prerequisites:*
@@ -41,6 +43,10 @@ Instead of talking about numbers being described in some amount of words, we wil
 To be truly formal, we can talk about algorithms in terms of Turing Machines. The Turing Machine is a conceptual model of an algorithm in which the only operations allowed are reading and writing bits from an infinite tape[^2] and moving back and forth along the tape (there is also a special "halt" operation which terminates the algorithm). The sequence of operations it performs is dictated by a deterministic finite automaton -- essentially, a finite collection of internal states together with a function that tells the machine how to transition between these states (and which operations to perform during each transition). The integer that a Turing Machine computes is simply the sequence of bits left on the tape (read in binary) after it halts, if it ever does.
 
 [^2]: In this post, unless otherwise specified the Turing Machine receives no input. The tape starts out blank. This is what I mean when I say "a Turing Machine computes a number," as opposed to the more common "a Turing Machine computes a (partial) function." The $$HALT$$ function we discuss later is more accurately described as $$HALT\_ON\_BLANK$$.
+
+<div align="center">
+<img src="assets/describability-paradox/tm.png" width="80%">
+</div>
 
 The exact details of how Turing Machines work are not important here. We only care about two key facts. First, every Turing Machine is finite. Although the operations it carries out on the tape (and its final output) can be unbounded, its "brain" itself must be described by a finite number of states. Secondly, any algorithm can be performed by a Turing Machine.[^3] This means that we are not limiting the definition of the word "compute" at all by restricting ourselves to thinking about Turing Machines. If it can be computed, it can be computed by a Turing Machine.
 

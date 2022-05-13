@@ -7,6 +7,8 @@ permalink: flipping-coins
 desc: What's the expected value of the number of times you must flip a coin before you encounter a given string, such as "HTTH"? Here's an algorithm to compute it.
 tags: [math, computer science]
 words: 3000
+image: "flipping-coins/coin_flip.jpg"
+preview: A common initial (incorrect) intuition about this problem is that all strings of length n should have the same answer -- something like 2^n. We sense that there should be some sort of symmetry between heads and tails, so it feels odd that "HHHH" should appear any earlier or later than "HTHT"
 suggested: false
 ---
 

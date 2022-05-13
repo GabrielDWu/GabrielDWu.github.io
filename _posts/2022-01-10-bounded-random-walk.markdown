@@ -4,10 +4,12 @@ title:  "The Bounded Random Walk, Four Different Ways"
 date:   2022-01-10
 author: Gabriel Wu
 permalink: bounded-random-walk
-desc: What is the probability that a random walk starting at 3 reaches 10 before 0? There are many ways to reach the same answer.
+desc: What is the probability that a random walk starting at 3 reaches 10 before 0?
 tags: [math]
 words: 1600
 suggested: true
+image: "bounded_random_walk/wolf_circle_2.png"
+preview: Expected value (together with probability) is my favorite mathematical tool. One of the most appealing qualities of an expected value problem is that there are so many different ways of reaching the same answer. I want to demonstrate this conceptual fluidity with a standard problem. Say you're currently at position 3 on
 ---
 
 *Recommended prerequisites:*
@@ -18,7 +20,7 @@ suggested: true
 
 Expected value (together with probability[^1]) is my favorite mathematical tool. One of the most appealing qualities of an expected value problem is that there are so many different ways of reaching the same answer.
 
-[^1]: The concepts of probability and expected value are very strongly related. You often use one to think about the other. Because of this, I am grouping them together as a single concept for this post.
+[^1]: The concepts of probability and expected value are very strongly related. You often use one to think about the other, so I tend to group them together as a single concept.
 
 I want to demonstrate this conceptual fluidity with a standard problem. Say you're currently at position $$3$$ on the number line. Every second, you flip a fair coin to determine whether to take a step in the positive or negative direction. What is the probability that you reach position $$10$$ before position $$0$$? The answer is quite intuitive: $$\frac{3}{10}$$. In general, the probability a random walk reaches $$+a$$ before $$-b$$ is $$\frac{b}{a+b}$$. Here are four ways you can show this, each with its own advantages.
 

@@ -217,6 +217,15 @@ pre {
     vertical-align: text-top;
 }
 
+.quote-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    fill: #{$grey-color};
+    padding-right: 0px;
+    vertical-align: text-top;
+}
+
 .social-media-list {
   li + li {
     padding-top: 5px;
