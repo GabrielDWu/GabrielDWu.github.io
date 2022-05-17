@@ -6,7 +6,7 @@ order: 3
 ---
 <img src="/assets/me.jpg" align="right" width="35%">
 
-My name is Gabriel Wu. I am an undergraduate student at Harvard (class of 2025). Let's go Currier House!<br>
+My name is Gabriel Wu. I am an undergraduate student at Harvard (class of 2025) and proud resident of Currier House.<br>
 
 My academic interests include:
 - math

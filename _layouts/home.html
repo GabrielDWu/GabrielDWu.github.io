@@ -10,7 +10,7 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ "Suggested" }}</h2>
+    <h2 class="post-list-heading">{{ "Suggested Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       {%- if post.suggested -%}
@@ -28,7 +28,7 @@ layout: default
         
                 
         {%- if post.image -%}
-          <div align="center" class="post-image"> <img src= "assets/{{post.image}}" height=300px> </div>
+          <div align="center" class="post-image"> <a href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}"><img src= "assets/{{post.image}}" height=300px> </a> </div>
         {%- endif -%}
         
         {%- if post.preview -%}
@@ -37,15 +37,17 @@ layout: default
           <p align="right"> <a href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}"> <i> (Continue Reading) </i> </a> </p>
         {%- endif -%}
       </li>
+      <hr>
+      <br>
       {%- endif -%}
       {%- endfor -%}
     </ul>
   {%- endif -%}
 
-  <br>
+  
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ "Suggested" }}</h2>
+    <h2 class="post-list-heading">{{ page .list_title | default: "All Posts" }} ({{ site.posts.size }})</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
@@ -62,7 +64,7 @@ layout: default
         
                 
         {%- if post.image -%}
-          <div align="center" class="post-image"> <img src= "assets/{{post.image}}" height=300px> </div>
+          <div align="center" class="post-image"> <a href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}"><img src= "assets/{{post.image}}" height=300px> </a> </div>
         {%- endif -%}
         
         {%- if post.preview -%}
@@ -71,6 +73,8 @@ layout: default
           <p align="right"> <a href="{%- if post.pdf -%}{{ post.pdf }}{%- else -%}{{ post.url | relative_url }}{%- endif -%}"> <i> (Continue Reading) </i> </a> </p>
         {%- endif -%}
       </li>
+      <hr>
+      <br>
       {%- endfor -%}
     </ul>
   {%- endif -%}
