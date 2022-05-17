@@ -20,7 +20,7 @@ In this post, I want to briefly cover the results of the 2017 paper ["Universal 
 
 # Neural Networks
 
-Here's my understanding of how (deep) neural nets work. Say we have a neural network that has been trained to classify images of a fixed size. That is, given am image of $$n \times m$$ pixels, it assigns it to a class like "dog" or "pillow". The network consists of a bunch of layers of nodes as shown below. On the very left, we have an input layer of have $$3nm$$ input nodes: one for each color channel (RGB) of each pixel in the image. In the middle, we have a bunch of "hidden layers," and then on the right we have an output layer that contains one node for each of the network's classification options.
+Here's my understanding of how (deep) neural nets work. Say we have a neural network that has been trained to classify images of a fixed size. That is, given an image of $$n \times m$$ pixels, it assigns it to a class like "dog" or "pillow". The network consists of a bunch of layers of nodes as shown below. On the very left, we have an input layer of $$3nm$$ input nodes: one for each color channel (RGB) of each pixel in the image. In the middle, we have a bunch of "hidden layers," and then on the right, we have an output layer that contains one node for each of the network's classification options.
 
 <div style="text-align:center;font-size:14px">
 <img src="/assets/adversarial-perturbations/neural_net.png" width="80%"> <br>
@@ -35,7 +35,7 @@ Assuming that our model is already trained (that is, we've figured out good line
 
 # Adversarial Perturbations
 
-The authors of this paper were able to find *adversarial perturbations* for state-of-the-art deep neural nets. Say that our network correctly classifies an image $$I$$ as "coffeepot". An adversarial perturbation is a small change $$\Delta$$ such that the network classifies $$I' = I + \Delta$$ as something else entirely, such as "macaw" (addition of images is done exactly how you would expect: add up the the RGB values, pixel by pixel). Surprisingly, $$\Delta$$ can be so small that it is barely perceptible to the human eye -- they were able to find perturbations that changed the RGB color value of each pixel by at most $$10$$ (on a scale from $$0$$ to $$255$$).
+The authors of this paper were able to find *adversarial perturbations* for state-of-the-art deep neural nets. Say that our network correctly classifies an image $$I$$ as "coffeepot". An adversarial perturbation is a small change $$\Delta$$ such that the network classifies $$I' = I + \Delta$$ as something else entirely, such as "macaw" (addition of images is done exactly how you would expect: add up the RGB values, pixel by pixel). Surprisingly, $$\Delta$$ can be so small that it is barely perceptible to the human eye -- they were able to find perturbations that changed the RGB color value of each pixel by at most $$10$$ (on a scale from $$0$$ to $$255$$).
 
 <div style="text-align:center;font-size:14px">
 <img src="/assets/adversarial-perturbations/coffeepot_plus_delta.png" width="100%"> <br>
@@ -44,7 +44,7 @@ The authors of this paper were able to find *adversarial perturbations* for stat
 
 <br>
 
-This points at a serious problem with our neural network that could lead to real-world failures. As an example, say that airports begin using deep neural nets to screen passport photos. This could be a security issue if terrorists were to modify their own photos with these adversarial perturbations, causing the network to fail to recognize them.
+This points to a serious problem with our neural network that could lead to real-world failures. As an example, say that airports begin using deep neural nets to screen passport photos. This could be a security issue if terrorists were to modify their own photos with these adversarial perturbations, causing the network to fail to recognize them.
 
 But it's even worse. By default, there is no reason to expect that a perturbation $$\Delta$$ that fools the network on a specific image will also fool the network when applied to other images. Surprisingly, the researchers were able to find some perturbations that were *universal*[^2]. That is, they found a fixed perturbation $$\Delta$$ such that, for a large fraction of images $$I$$ drawn from the test distribution, $$I + \Delta$$ was misclassified.
 
@@ -85,7 +85,7 @@ I find it helpful to think of adversarial perturbations pictorially. What do adv
 
 Notice the shaded sub-regions inside each classification region. These shaded sub-regions represent the test distribution $$D$$, i.e. images that you would find in the real world. The color of a shaded region is the "ground truth", i.e. the actual label of the image. When we make the assumption that our model is 100% accurate at classifying images in $$D$$, this is equivalent to saying "purple shaded regions lie within purple boundaries, red shaded regions lie within red boundaries, etc."
 
-Almost all of $$\mathbb{R}^d$$ corresponds to images of random-looking noise[^4] -- only a tiny fraction of $$\mathbb{R}^d$$ contains images which you would look at and say "yeah, that's a cat/pillow/coffee pot". Lets call this set of images $$H$$ for "human recognizable". And only a small fraction of images in $$H$$ are in $$D$$ -- images you would encounter in real life. For example, the unmodified picture of the coffee pot above is in $$D$$, while the adversarially perturbed image of the coffee pot is *not* in $$D$$ (although it is in $$H$$). After all, we are assuming that our neural net is 100% accurate on $$D$$, so in order for a perturbation to fool the model, it has to knock the image outside of $$D$$. Note that $$D \subset H \subset \mathbb{R}^d$$, and any small perturbation of $$D$$ should still lie in $$H$$. You can think of $$H$$ as the union of small neighborhoods surrounding points of $$D$$.
+Almost all of $$\mathbb{R}^d$$ corresponds to images of random-looking noise[^4] -- only a tiny fraction of $$\mathbb{R}^d$$ contains images that you would look at and say "yeah, that's a cat/pillow/coffee pot". Let's call this set of images $$H$$ for "human recognizable". And only a small fraction of images in $$H$$ are in $$D$$ -- images you would encounter in real life. For example, the unmodified picture of the coffee pot above is in $$D$$, while the adversarially perturbed image of the coffee pot is *not* in $$D$$ (although it is in $$H$$). After all, we are assuming that our neural net is 100% accurate on $$D$$, so in order for a perturbation to fool the model, it has to knock the image outside of $$D$$. Note that $$D \subset H \subset \mathbb{R}^d$$, and any small perturbation of $$D$$ should still lie in $$H$$. You can think of $$H$$ as the union of small neighborhoods surrounding points of $$D$$.
 
 [^4]: Alternatively, you could interpret this as saying that the largest classification region by volume in $$\mathbb{R}^d$$ is "TV static".
 
@@ -109,9 +109,9 @@ Here's one way this could look:
 <img src="/assets/adversarial-perturbations/category3.png" width="70%">
 </div>
 
-This image is a bit weirder. Like the previous category, it has skinny, almost fractally areas. But the important difference is where the shaded parts line up along the classification borders. Notice that there is a commmon direction in which all of $$D$$ is "smeared". This corresponds to a single direction for $$\Delta$$ that successfully pushes all of $$D$$ across a neighboring classification boundary. In other words, the tangents of classification boundaries near $$D$$ are strongly correlated. This is in contrast with Category 2, in which the tangents of boundaries point in all different directions.
+This image is a bit weirder. Like the previous category, it has skinny, almost fractally areas. But the important difference is where the shaded parts line up along the classification borders. Notice that there is a common direction in which all of $$D$$ is "smeared". This corresponds to a single direction for $$\Delta$$ that successfully pushes all of $$D$$ across a neighboring classification boundary. In other words, the tangents of classification boundaries near $$D$$ are strongly correlated. This is in contrast with Category 2, in which the tangents of boundaries point in all different directions.
 
-I was tempted to draw this category in a more simplified way: as a stack of thin pancakes all oriented in the same direction. But in two dimensions, this gives the false impression that the classification regions all have to be the same shape. In reality, there can be lots of complexity and diversity to the shapes of the regions -- it can just occur in the $$d-1$$ other dimensions. In fact, as I have drawn, the regions are allowed to have thickness even in the direction of $$\Delta$$, as long as $$D$$ is always distributed on a specific side of each region.
+I was tempted to draw this category in a more simplified way: as a stack of thin pancakes, all oriented in the same direction. But in two dimensions, this gives the false impression that the classification regions all have to be the same shape. In reality, there can be lots of complexity and diversity to the shapes of the regions -- it can just occur in the $$d-1$$ other dimensions. In fact, as I have drawn, the regions are allowed to have thickness even in the direction of $$\Delta$$, as long as $$D$$ is always distributed on a specific side of each region.
 
 **Category 4: All perturbations are adversarial.** This represents the worst-case scenario, in which the model completely flounders whenever you add a bit of noise to an image. This roughly means that $$\forall I \in D, \forall \Delta \in \mathcal{B}_ \epsilon, [f(I) \neq f(I + \Delta)]$$. With this scenario comes the assumption that the topology of $$D$$ is very disparate -- more similar to a bunch of isolated points than a bunch of blobby regions:
 
@@ -119,7 +119,7 @@ I was tempted to draw this category in a more simplified way: as a stack of thin
 <img src="/assets/adversarial-perturbations/category4.png" width="70%">
 </div>
 
-Notice that the shaded regions are in small bubbles contained in broder regions of a different class. I don't expect that any image classification model would be bad enough to fall into this scenario.
+Notice that the shaded regions are in small bubbles contained in broader regions of a different class. I don't expect that any image classification model would be bad enough to fall into this scenario.
 
 
 # Conclusion
@@ -130,7 +130,7 @@ In my opinion, the most important ideas brought up here are:
 - Categorizing robustness to adversarial perturbations into these four types
 - The idea of the orientations of classification boundaries being "correlated"
 
-Coming up with these four categories helped me understand the relationship between adversarial perturbations and the geometry of classification boundaries. I'm pleased with how each of the cateogires can be expressed by a logical formula, the only differences between them being the types and order of the quantifiers.
+Coming up with these four categories helped me understand the relationship between adversarial perturbations and the geometry of classification boundaries. I'm pleased with how each of the categories can be expressed by a logical formula, the only differences between them being the types and order of the quantifiers.
 
 Finally, I want to mention that an obvious way that one could attempt to make a model more robust (i.e. bring it from Category $$i$$ to Category $$i-1$$) would be to re-train it on perturbations of images in $$D$$, either randomly or adversarially. The researchers tried this, with limited success -- more details can be found in their paper. The paper also describes the algorithm they used to generate adversarial perturbations and a precise way to quantify how correlated the orientations of the classification boundaries are.
 
