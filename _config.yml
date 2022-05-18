@@ -21,7 +21,8 @@
 title: The Excluded Riddle
 author: Gabriel Wu
 email: gabriel [dot] d [dot] wu314 [at] gmail
-description: "\"It's all fun and games until someone proves Sprague Grundy. After that, it's all fun and Nim.\""
+quote: "\"It's all fun and games until someone proves Sprague Grundy. After that, it's all fun and Nim.\""
+description: "Gabriel Wu's blog"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gabrieldwu.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: GabrielDWu1
