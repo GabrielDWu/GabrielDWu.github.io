@@ -9,12 +9,12 @@ tags: [artificial intelligence]
 words: 2400
 suggested: false
 image: "adversarial-perturbations/category2.png"
-preview: In this post, I want to briefly cover the results of the 2017 paper <a href="https://arxiv.org/pdf/1610.08401.pdf">"Universal adversarial perturbations"</a>, and discuss what it implies about the geometry of classification boundaries. I don't have much experience or expertise with deep learning, but hopefully these points aren't completely off the mark
+preview: In this post, I want to briefly cover the results of the 2017 paper <a href="https://arxiv.org/pdf/1610.08401.pdf">"Universal adversarial perturbations"</a>, and discuss what it implies about the geometry of classification boundaries. I hope to make this post accessible to readers who are new to machine learning, so I will not assume any prior knowledge beyond a general math background
 ---
 
-*Thanks to Alex Cai for the discussion that inspired these ideas.*
+*Thanks to Alex Cai for the discussion that inspired these ideas. Also, thanks to Stephen Casper for feedback.*
 
-In this post, I want to briefly cover the results of the 2017 paper ["Universal adversarial perturbations"](https://arxiv.org/pdf/1610.08401.pdf)[^1], and discuss what it implies about the geometry of classification boundaries. I don't have much experience or expertise with deep learning, but hopefully these points aren't completely off the mark.
+In this post, I want to briefly cover the results of the 2017 paper ["Universal adversarial perturbations"](https://arxiv.org/pdf/1610.08401.pdf)[^1], and discuss what it implies about the geometry of classification boundaries. I hope to make this post accessible to readers who are new to machine learning, so I will not assume any prior knowledge beyond a general math background.
 
 [^1]: S. Moosavi-Dezfooli, A. Fawzi, O. Fawzi, and P. Frossard. Universal adversarial perturbations. In *IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, 2017. [https://arxiv.org/abs/1610.08401](https://arxiv.org/abs/1610.08401)
 
@@ -39,7 +39,7 @@ The authors of this paper were able to find *adversarial perturbations* for stat
 
 <div style="text-align:center;font-size:14px">
 <img src="/assets/adversarial-perturbations/coffeepot_plus_delta.png" width="100%"> <br>
-<em>If you add a small perturbation to a normal image of a coffeepot, the neural network misclassifies it as a "macaw". The middle perturbation image has been scaled up for visibility. <br> Image credit: Moosavi-Dezfooli et al.</em>
+<em>If you add a small perturbation to a normal image of a coffeepot, the neural network misclassifies it as a "macaw". The colors of the middle perturbation image have been scaled up for visibility. <br> Image credit: Moosavi-Dezfooli et al.</em>
 </div>
 
 <br>
@@ -52,7 +52,7 @@ But it's even worse. By default, there is no reason to expect that a perturbatio
 
 <div style="text-align:center;font-size:14px">
 <img src="/assets/adversarial-perturbations/universal_perturbation.png" width="50%"> <br>
-<em>A single universal perturbation fools the model when applied to many images. <br> Image credit: Moosavi-Dezfooli et al.</em>
+<em>A single universal perturbation fools the model when applied to many images. The left column shows the original images, and the right column shows the images and classifications after applying the perturbation. <br> Image credit: Moosavi-Dezfooli et al.</em>
 </div>
 
 <br>
@@ -67,15 +67,17 @@ We can think of a neural network as a continuous function $$f: \mathbb{R}^d \to 
 
 <br>
 
-What can we say about the boundaries between regions? These correspond to inputs for which two distinct $$y_i$$ and $$y_j$$ are tied for the highest activation. If we're using the sigmoid function (which is differentiable), we can prove that these boundaries are locally $$d-1$$-dimensional hypersurfaces. This means that if you zoom in close enough, the boundaries between regions should look nice and flat -- they're not going to have any weird fractally properties.
+What can we say about the boundaries between regions? These correspond to inputs for which two distinct $$y_i$$ and $$y_j$$ are tied for the highest activation. If we're using the sigmoid function (which is differentiable), we can prove that these boundaries are locally $$d-1$$-dimensional hypersurfaces. This means that if you zoom in close enough, the boundaries between regions should look nice and flat -- they're not going to have any weird fractal properties.
 
-But this flatness is only guaranteed *if we zoom in far enough*. In practice, even though the function $$f$$ is smooth, it can still look very un-smooth on human scales (in the same way that $$100 \sin (100 x)$$ looks very un-smooth when you [plug it into Desmos](https://www.desmos.com/calculator/ohm6ugimch)). This is what is going on with adversarial perturbations. A small change in $$x$$ can lead to a large change in $$f$$ because its continuity only becomes apparent for *really really* small changes in $$x$$.[^3]
+But this flatness is only guaranteed *if we zoom in far enough*. In practice, even though the function $$f$$ is smooth, it can still look very un-smooth on human scales (in the same way that $$100 \sin (100 x)$$ looks very un-smooth when you [plug it into Desmos](https://www.desmos.com/calculator/ohm6ugimch)). This is what is going on with adversarial perturbations. A small change in $$x$$ can lead to a large change in $$f$$ because its linearity only becomes apparent for *really really* small changes in $$x$$.[^3]
 
 [^3]: The function $$f$$ might be so sensitive that even the smallest change you can make to a digital image -- modifying one color value by $$1$$ out of $$256$$ -- could lead to large changes in $$f$$. In other words, the straight-line path from $$I$$ to $$I' = I + (0, \dots, 0, 1, 0, \dots, 0)$$ could potentially cross multiple decision boundaries.
 
 # Four Scenarios
 
 I find it helpful to think of adversarial perturbations pictorially. What do adversarial perturbations tell us about the geometry of classification boundaries? Consider four hypothetical neural networks that have qualitatively different levels of robustness to perturbations. From most robust to least robust, these are **(1)** there are *no* adversarial perturbations, **(2)** there *are* adversarial perturbations **(3)** there are *universal* adversarial perturbations, and **(4)** all perturbations are adversarial. Each of these categories is strictly more robust than the next, in the sense that any type of perturbation that can fool model $$i$$ can also fool model $$i+1$$.
+
+As you read through these scenarios, please keep in mind that the diagrams are meant as coarse 2D intuition builders, and nothing more. The actual classification boundaries in $$\mathbb{R}^d$$ would look drastically different (if it were even possible to visualize $$d$$ dimensions).
 
 **Category 1: There are no adversarial perturbations.** In this ideal model, adversarial perturbations do not work. For almost all images in the real world distribution $$D$$, there is no *small* $$\Delta$$ we can add to it that will cause it to be misidentified. This means that a medium-sized ball centered around almost any point in $$D$$ will still lie completely within the correct classification region. Written symbolically, this case roughly means $$\forall I \in D, \forall \Delta \in \mathcal{B}_ \epsilon, [f(I) = f(I + \Delta)]$$ (where $$\mathcal{B}_ \epsilon$$ is all points in $$\mathbb{R}^d$$ with a small magnitude). This is what the classification boundaries would look like:
 
@@ -109,7 +111,7 @@ Here's one way this could look:
 <img src="/assets/adversarial-perturbations/category3.png" width="70%">
 </div>
 
-This image is a bit weirder. Like the previous category, it has skinny, almost fractally areas. But the important difference is where the shaded parts line up along the classification borders. Notice that there is a common direction in which all of $$D$$ is "smeared". This corresponds to a single direction for $$\Delta$$ that successfully pushes all of $$D$$ across a neighboring classification boundary. In other words, the tangents of classification boundaries near $$D$$ are strongly correlated. This is in contrast with Category 2, in which the tangents of boundaries point in all different directions.
+This image is a bit weirder. Like the previous category, it has skinny, almost fractal-like areas. But the important difference is where the shaded parts line up along the classification borders. Notice that there is a common direction in which all of $$D$$ is "smeared". This corresponds to a single direction for $$\Delta$$ that successfully pushes all of $$D$$ across a neighboring classification boundary. In other words, the tangents of classification boundaries near $$D$$ are strongly correlated. This is in contrast with Category 2, in which the tangents of boundaries point in all different directions.
 
 I was tempted to draw this category in a more simplified way: as a stack of thin pancakes, all oriented in the same direction. But in two dimensions, this gives the false impression that the classification regions all have to be the same shape. In reality, there can be lots of complexity and diversity to the shapes of the regions -- it can just occur in the $$d-1$$ other dimensions. In fact, as I have drawn, the regions are allowed to have thickness even in the direction of $$\Delta$$, as long as $$D$$ is always distributed on a specific side of each region.
 
