@@ -7,9 +7,9 @@ order: 1
 
 I enjoy writing problems.
 
-This page contains a list of problems I've written that have appeared on various competitive programming and math contests. The problems I think are the coolest appear in **bold**. I have given each problem a subjective difficulty score, from I to V (easiest to hardest).
+This page contains a list of problems I've written that have appeared on competitive programming and math contests -- mainly the [Montgomery Blair Informatics Tournament](https://mbit.mbhs.edu/) and the [Harvard MIT Math Tournament](https://www.hmmt.org/). The problems I think are the coolest appear in **bold**. I have given each problem a subjective difficulty score, from I to V (easiest to hardest).
 
-*Updated 3/10/22*
+*Updated 5/24/22*
 
 # Competitive Programming
 
@@ -36,6 +36,7 @@ This page contains a list of problems I've written that have appeared on various
 |  [mBIT 2021S Advanced](https://mbit.mbhs.edu/archive/2021s/advanced.pdf) #9 | **Immortality Potion** |     IV     |
 | [mBIT 2021S Advanced](https://mbit.mbhs.edu/archive/2021s/advanced.pdf) #10 |   **Luigi's Mansion**  |      V     |
 | [mBIT 2021S Advanced](https://mbit.mbhs.edu/archive/2021s/advanced.pdf) #12 |       Pillar Path      |      V     |
+| [mBIT 2022S Advanced](https://mbit.mbhs.edu/archive/2022s/advanced.pdf) #8  |      Rating Report     |     III    |
 
 [^1]: Co-written with Timothy Qian. This problem was featured on FiveThirtyEight's puzzling blog, [The Riddler](https://fivethirtyeight.com/features/can-you-outthink-the-sphinx/).
 
