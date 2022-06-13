@@ -8,7 +8,7 @@ desc: What is the probability that a random walk starting at 3 reaches 10 before
 tags: [math]
 words: 1600
 suggested: true
-image: "bounded_random_walk/wolf_circle_2.png"
+image: "bounded-random-walk/wolf_circle_2.png"
 preview: Expected value (together with probability) is my favorite mathematical tool. One of the most appealing qualities of an expected value problem is that there are so many different ways of reaching the same answer. I want to demonstrate this conceptual fluidity with a standard problem. Say you're currently at position 3 on
 ---
 
@@ -52,7 +52,7 @@ What types of sequences set each element at the average of its neighbors? Straig
 We start with a related problem. There are $$11$$ equally spaced points around a circle. A a wolf standing at one of these points, and sheep standing at the rest. Every second, the wolf travels one step clockwise or counterclockwise (with equal chance), eating any sheep along the way. The wolf will continue until it has eaten all of the sheep. What is the probability that $$A$$ is the last sheep the wolf eats?
 
 <div style="text-align:center">
-<img src="/assets/bounded_random_walk/wolf_circle_1.png" width="60%">
+<img src="/assets/bounded-random-walk/wolf_circle_1.png" width="60%">
 </div>
 
 Here's a slick way to answer this question. Without loss of generality, say that the wolf visits point $$b$$ before point $$c$$ (the other case is handled symmetrically). Let this be the first time that the wolf is next to $$A$$. Then in order for $$A$$ to be the last point visited, the wolf must make it all the way around the circle clockwise to point $$c$$ before it reaches $$A$$. In other words, the probability that $$A$$ is the last sheep eaten is the same as the probability that the wolf reaches a point $$9$$ positions clockwise before a point $$1$$ position counterclockwise. Let's call this probability $$x$$.
@@ -62,7 +62,7 @@ But now realize that this chain of logic works for *any* sheep! The probability 
 This is a neat solution, but how does it help us with our original problem? Let's label the points like this:
 
 <div style="text-align:center">
-<img src="/assets/bounded_random_walk/wolf_circle_2.png" width="60%">
+<img src="/assets/bounded-random-walk/wolf_circle_2.png" width="60%">
 </div>
 
 Now our problem is equivalent to finding the probability that the wolf eats sheep $$10$$ before sheep $$0$$. Here comes the key observation. If the *last* sheep it eats is $$0$$, $$1$$, or $$2$$, then the wolf must have eaten sheep $$10$$ before sheep $$0$$. Otherwise, if the last sheep it eats is one of $$4, 5, \dots, 10$$, then the wolf must have eaten $$0$$ before $$10$$.[^2] This is great news because we already know each sheep has a $$\frac{1}{10}$$ probability of being eaten last! Thus, our final answer is $$\frac{3}{10}$$.

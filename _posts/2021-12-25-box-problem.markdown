@@ -8,7 +8,7 @@ desc: "A metaphysical thought experiment."
 tags: [philosophy, physics]
 words: 1700
 suggested: true
-image: "box_problem/box_fig1.png"
+image: "box-problem/box_fig1.png"
 preview: The entire universe consists of a rectangular box, which you are trapped in. Four of the faces -- the floor, the ceiling, and the left and right walls -- are solid metal and cannot be tampered with. However, the front and back faces (which are, say, 5 feet apart) act as portals
 ---
 
@@ -19,7 +19,7 @@ Here is an interesting thought experiment I came up with that brings up some dee
 The entire universe consists of a rectangular box, which you are trapped in. Four of the faces -- the floor, the ceiling, and the left and right walls -- are solid metal and cannot be tampered with. However, the front and back faces (which are, say, 5 feet apart) act as portals that instantaneously transport objects between each other. If you were to throw a baseball through the front portal, it would instantly pop out of the back portal at the same height, lateral position, and velocity.
 
 <div style="text-align:center">
-<img src="/assets/box_problem/box_fig1.png">
+<img src="/assets/box-problem/box_fig1.png">
 </div>
 
 Because of this, you find yourself trapped inside the box. Any time you try to leave through the front or the back, you just reappear on the other side. You can even stick half of your body through the portal at a time. You won't even feel anything unusual about your body being split into two discontiguous parts because all of the blood flow and nerve signals pass will freely between the portals.[^1] If your arms are long enough, you can even reach forward and tap the back of your head, or high-five yourself by spreading out your arms.
@@ -29,7 +29,7 @@ Because of this, you find yourself trapped inside the box. Any time you try to l
 In fact, since photons also get teleported between the portals, if you look forward you see yourself from the back, appearing one box length (5 feet) away! This image comes from photons bouncing off your back, traveling through the back portal, and then hitting your eyes. You can also see another image of yourself standing 10 feet away, corresponding to photons that bounce off your back, travel through the back portal, go through the entire box to take the back portal again, and then hit your eyes. You would see similar images for photons that take the portal three times, four times, and so on.
 
 <div style="text-align:center;font-size:14px">
-<img src="/assets/box_problem/box_fig2.png" width="60%"> <br>
+<img src="/assets/box-problem/box_fig2.png" width="60%"> <br>
 <em>The yellow photon forms the image of yourself 5 feet away, and the orange photon forms the image of yourself 10 feet away. The orange photon doesn't pass through your body, it just looks like that when drawn in two dimensions.</em>
 </div>
 
@@ -44,13 +44,13 @@ This means you have the illusion of seeing an infinite line of copies of yoursel
 The entire universe now consists of a metal hallway, extending infinitely in both directions. You are in this hallway, along with infinitely many copies of you, spaced out by 5 feet each. These are *identical* copies of you, down to the atom. In fact, these copies of you are placed in such a way that the entire universe is periodic. In other words, the distribution of matter and energy in any 5-foot subsection is identical to the distribution of matter and energy in the next 5-foot subsection, and so on. Alternatively, if you let $$f(x)$$ represent the cross-section of the hallway at position $$x$$ (where $$x$$ ranges length-wise along the hallway), then $$f(x) = f(x+5)$$.
 
 <div style="text-align:center">
-<img src="/assets/box_problem/box_fig3.png">
+<img src="/assets/box-problem/box_fig3.png">
 </div>
 
 If you've watched *Star Wars: The Last Jedi*, this is essentially what Rey experiences in her visit to the "mirror cave" (although in the movie there's a bit of lag between her actions and her clones' actions):
 
 <div style="text-align:center;font-size:14px">
-<img src="/assets/box_problem/starwars.jpg" width="80%"> <br>
+<img src="/assets/box-problem/starwars.jpg" width="80%"> <br> <br>
 <em>The "mirror cave" scene from </em>Star Wars: The Last Jedi.
 </div>
 

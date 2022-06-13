@@ -8,14 +8,14 @@ desc: A short story about creating life in a simulated universe.
 tags: [sci-fi, philosophy]
 words: 2700
 suggested: true
-image: "/prometheus_simulation/planet.png"
+image: "/prometheus-simulation/planet.png"
 preview: Nine thousand Old-Earth years after the invention of Faster than Light travel, the physicist Marcus Dios imagined what would eventually become known as humanity's greatest science experiment. The Prometheus Simulation began as a seed in Dios's mind. It soon became a plan, then a project proposal, and finally a full project
 ---
 
 *This is my first attempt at writing a science fiction short story.*
 
 <div align="center">
-<img src="assets/prometheus_simulation/planet.png" width="80%">
+<img src="assets/prometheus-simulation/planet.png" width="80%">
 </div>
 
 Nine thousand Old-Earth years after the invention of Faster than Light travel, the physicist Marcus Dios imagined what would eventually become known as humanity's greatest science experiment. The Prometheus Simulation began as a seed in Dios's mind. It soon became a plan, then a project proposal, and finally a full project adopted by the Interplanetary Institute of Science. Humanity had various goals for the Simulation. The astrobiologists wanted to know what forms of life would develop in a simulated universe. The theoretical physicists wanted to study how different physical laws would behave. The philosophers wanted to get a better understanding of the nature of consciousness. And the computer scientists just wanted to show it could be done.

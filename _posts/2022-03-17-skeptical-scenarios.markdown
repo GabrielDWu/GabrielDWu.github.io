@@ -8,7 +8,7 @@ desc: "No matter how contrived a skeptical scenario is, the fact that you were a
 tags: [philosophy]
 words: 2500
 suggested: false
-image: "skeptical_scenarios/minecraft.png"
+image: "skeptical-scenarios/minecraft.png"
 preview: Attaining true knowledge is hard. As far as I know, I could be a brain in a vat with my nerve endings connected to wires that are simulating physical experiences. Gravity could reverse directions every 13.8 billion years, the first time being tomorrow. Or, our entire universe could be a simulation
 ---
 
@@ -49,7 +49,7 @@ For example, imagine generating a Minecraft world from a random seed. Before the
 <br>
 
 <div style="text-align:center;font-size:14px">
-<img src="/assets/skeptical_scenarios/minecraft.png" width="70%"> <br> <br>
+<img src="/assets/skeptical-scenarios/minecraft.png" width="70%"> <br> <br>
 <em>Feeling a warm pixelated breeze, you slowly open your eyes to a nascent Minecraft world. You see trees. Time to update those priors.</em>
 </div>
 
@@ -82,7 +82,7 @@ In fact, since our prior ranges over descriptions of *entire universes* (there's
 <br>
 
 <div style="text-align:center;font-size:14px">
-<img src="/assets/skeptical_scenarios/hotdogs.png" width="70%"> <br> <br>
+<img src="/assets/skeptical-scenarios/hotdogs.png" width="70%"> <br> <br>
 <em>A universe tessellated with nothing but vegan hot dogs.</em>
 </div>
 
