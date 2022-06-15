@@ -12,7 +12,7 @@ image: "butterfly-probability/dice.png"
 preview: What do we really mean when we use the word "probability"? Assuming that the universe obeys deterministic physical laws, an event must occur with either probability 0 or 1. The future positions of every atom in the universe are completely determined by their initial conditions. So what do we mean when we make statements like "Trump has a 25% chance of winning in 2024"?
 ---
 
-*Thanks to Alex Cai and Haneul Shin for discussing these ideas with me.*
+*Thanks to Alex Cai and Haneul Shin for discussing these ideas with me. Thanks to Eric Neyman for feedback.*
 
 <div style="text-align:center;font-size:14px">
 <img src="assets/butterfly-probability/dice.png" width="80%">
@@ -91,30 +91,34 @@ Notice the subscript: $$U \sim \mathcal{B}_ \mathcal{E}(U_0)$$. This means that 
 
 But we're not done yet. Our function is still parameterized by $$\mathcal{E}$$. Choosing different values of $$\mathcal{E}$$ will result in different answers -- which one do we mean by *the* probability of $$r$$?
 
-Consider the following graph which shows how $$P_{\mathcal E}(r, U_0, t)$$ changes as we vary $$\mathcal{E}$$.
-
-<div style="text-align:center;font-size:14px">
-<img src="assets/butterfly-probability/graph1.png" width="100%"> <br>
-</div>
-
-For very large values of $$\mathcal{E}$$, $$P_{\mathcal{E}}$$ should be near $$0$$ because the $$\mathcal{E}$$-ball will mostly contain universes vastly different from $$U$$ -- most of them won't even have a human being named "Trump". As $$\mathcal{E}$$ shrinks, we start to get $$\mathcal{E}$$-balls that contain universes more similar to ours, so $$P_{\mathcal{E}}$$ becomes non-negligible. Finally, as $$\mathcal{E}$$ approaches $$0$$, $$P_{\mathcal{E}}$$ converges to some value, marked by the dotted line. This is what we define the true, unparameterized, "Butterfly's Probability" of $$r$$ to be -- the limit of $$P_\mathcal{E}$$ as $$\mathcal{E}$$ vanishes.
-
-But wait! What happens if we zoom very far into the left part of this graph?
+Consider the following graph which shows how $$P_{\mathcal E}(r, U_0, t)$$ changes as $$\mathcal{E}$$ approaches $$0$$.
 
 <div style="text-align:center;font-size:14px">
 <img src="assets/butterfly-probability/graph2.png" width="100%">
-<em>The graph after zooming in with respect to the horizontal axis (tick marks for scale).</em>
 </div>
 
 <br>
 
-The value of $$P_\mathcal{E}$$ will hover around the dotted line for a while, but then it collapses to $$0$$ or $$1$$ at the very end. This corresponds to values of $$\mathcal{E}$$ that are extremely small: small enough that even the Butterfly Effect doesn't have enough time to produce much variation in the resultant universes. In other words, $$\mathcal{E}$$ is so small that we get the chain of implications
+Let's focus on the left part of this graph first. As we decrease $$\mathcal{E}$$, the value of $$P_\mathcal{E}$$ collapses to $$0$$ or $$1$$ for values of $$\mathcal{E}$$ that are extremely small -- small enough that even the Butterfly Effect doesn't have enough time to produce much variation in the resultant universes. In other words, this happens when $$\mathcal{E}$$ is so small that we get the chain of implications
 
 $$d(U_0, U) < \mathcal{E} \implies d(f(U_0, t), f(U, t)) \in O(1) \implies r(f(U_0, t)) = r(f(U, t)).$$
 
-If we assume that the Butterfly Effect acts exponentially, this would require $$\mathcal{E}$$ to be double exponentially small (something like $$\mathcal{E} \approx 2^{-2^{100}}$$ should suffice for reasonable values of $$t$$).
+Assuming that the Butterfly Effect acts exponentially, this would require $$\mathcal{E}$$ to be double exponentially small (something like $$\mathcal{E} = 2^{-2^{100}}$$).
 
-This means that we can't actually define the Butterfly Probability as $$\lim_{\mathcal{E} \to 0} P_\mathcal{E}$$. Doing so would bring us back to our original problem of only having probabilities in $$\{0, 1\}$$. Instead, we have to define it as
+But now look at the behavior of $$P_\mathcal{E}$$ when $$\mathcal{E}$$ isn't super close to $$0$$. As $$\mathcal{E}$$ grows, $$P_\mathcal{E}$$ converges to a certain value, marked by the dotted line. This is what we want to express by the true, unparameterized, "Butterfly's Probability" of $$r$$ -- the value that $$P_\mathcal{E}$$ hovers around when $$\mathcal{E}$$ is small, but not extremely small.
+
+Why do we need $$\mathcal{E}$$ to be small? Well, let's see what happens when we zoom out:
+
+<div style="text-align:center;font-size:14px">
+<img src="assets/butterfly-probability/graph1.png" width="100%">
+<em>The graph after zooming out with respect to the horizontal axis (tick marks for scale).</em>
+</div>
+
+<br>
+
+For a while $$P_\mathcal{E}$$ stays along the dotted line, but as it grows it starts to stray away. I added a few bumps in the graph because I'm not sure what the exact shape here would look like, and it probably depends on what $$r$$ is. Finally, when $$\mathcal{E}$$ is very big, $$P_\mathcal{E}$$ tends towards $$0$$ because the $$\mathcal{E}$$-ball will mostly contain universes vastly different from $$U$$ -- most of them won't even have a human being named "Trump".
+
+So how do we formally define the Butterfly Probability of $$r$$? We can't just write $$\lim_{\mathcal{E} \to 0} P_\mathcal{E}$$ because, as the first graph shows, this would bring us back to our original problem of only having probabilities in $$\{0, 1\}$$. But we also only want to work with $$\mathcal{E}$$ values that are relatively small, lest we run into the end behavior of the second graph. So as a compromise, we have to define it as
 
 > **Def.** The *Butterfly's Probability* of $$r$$ occurring within time $$t$$ is the value that $$P_\mathcal{E}(r, U_0, t)$$ converges to as $$\mathcal{E} \to 0$$, before it collapses to 0 or 1. 
 
